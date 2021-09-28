@@ -8,9 +8,23 @@ for (let i = 0; i < sounds.length; i++) {
     btn.innerText = sounds[i]
     
     btn.addEventListener('click', (e) => {
-        e.preventDefault()
+        stopSongs()
+
         document.getElementById(sounds[i]).play()
-        btn.removeEventListener("click")
+        
     })
     document.querySelector("#buttons").appendChild(btn)
 }
+
+function stopSongs() {
+    for (let i = 0; i < sounds.length; i++){
+        const song = document.getElementById(sounds[i]) 
+
+        song.pause()
+        song.currentTime = 0
+    }
+
+    }
+
+
+
