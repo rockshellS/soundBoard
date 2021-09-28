@@ -1,4 +1,4 @@
-const sounds = ['Hihatb1', 'Hihatopen', 'Hihatopen3', 'BassDrum3b', 'FloortomA', 'MedtomB','SmalltomB','SnareB', 'CymbalcrashA']
+const sounds = ['Hihatb1', 'Hihatopen', 'Hihatopen3', 'BassDrum3b', 'FloortomA', 'MedtomB','SmalltomB','SnareB', 'CymbalcrashA', 'BassMonster', 'Buildupdrums', 'Wobbleback', 'Riddimbass', 'Neddiebass']
 
 for (let i = 0; i < sounds.length; i++) {
     console.log(i)
@@ -7,7 +7,7 @@ for (let i = 0; i < sounds.length; i++) {
 
     btn.innerText = sounds[i]
     
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('mouseover', (e) => {
         stopSongs()
 
         document.getElementById(sounds[i]).play()
